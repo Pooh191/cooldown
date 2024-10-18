@@ -1,0 +1,133 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.countdown-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #007aff;
+}
+
+.countdown {
+    font-size: 54px;
+    font-weight: bold;
+    color: #007aff;
+}
+
+input[type="datetime-local"] {
+    padding: 12px;
+    font-size: 20px;
+    margin-right: 10px;
+    width: 270px;
+    border-radius: 8px;
+    border: 2px solid #4facfe;
+    outline: none;
+}
+
+input[type="datetime-local"]:focus {
+    border-color: #007aff;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 20px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* ... (สไตล์อื่นๆ ที่มีอยู่) ... */
+
+.modal {
+    display: none; /* ซ่อน modal โดยค่าเริ่มต้น */
+    position: fixed; /* อยู่บนหน้าจอ */
+    z-index: 1; /* อยู่ด้านบนสุด */
+    left: 0;
+    top: 0;
+    width: 100%; /* เต็มหน้าจอ */
+    height: 100%; /* เต็มหน้าจอ */
+    overflow: auto; /* ถ้ามีเนื้อหามากให้มีการเลื่อน */
+    background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังมืด */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto; /* ตั้งให้อยู่กลางหน้าจอ */
+    padding: 30px;
+    border: none;
+    border-radius: 15px; /* มุมโค้ง */
+    width: 80%; /* ความกว้าง */
+    max-width: 500px; /* ความกว้างสูงสุด */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* เงา */
+    animation: slideIn 0.5s ease; /* เพิ่มการเคลื่อนไหว */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaaaaa;
+    float: right; /* ให้ปิดอยู่ด้านขวา */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff0000; /* เปลี่ยนสีเมื่อ hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-message {
+    font-size: 20px;
+    color: #333333; /* สีข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007aff;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังบาง ๆ */
+    border-radius: 5px;
+    position: absolute; /* ทำให้ footer อยู่ที่ด้านล่าง */
+    bottom: 0; /* จัดให้ footer อยู่ที่ด้านล่าง */
+    width: 100%; /* ให้ footer กว้างเต็ม */
+}
+
+::selection {
+    background: #333;
+    color: #fff;
+}

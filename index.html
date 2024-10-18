@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooldown Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="countdown-container">
+    <div class="countdown-title">ตั้งค่าวันและเวลาที่สิ้นสุด Cooldown:</div>
+    
+    <input type="datetime-local" id="cooldownDateTimeInput">
+    <button onclick="startCountdown()">เริ่มนับถอยหลัง</button>
+
+    <div class="countdown" id="countdown"></div>
+</div>
+
+<!-- Modal สำหรับ Popup -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalMessage" class="modal-message"></div>
+    </div>
+</div>
+
+
+<!-- เพิ่มส่วนลิขสิทธิ์ที่นี่ -->
+<footer>
+    <p>Copyright © 2023 - <span id="currentYear"></span><br>
+            Made By Thanakorn Sae-jong </p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+(function() {
+    const element = new Image();
+    Object.defineProperty(element, 'id', {
+        get() {
+            alert('DevTools Detected');
+        }
+    });
+    console.log(element);
+})();
+</script>
+
+</body>
+</html>
